@@ -7,22 +7,23 @@
 // --------------------------------------------------------------------------------
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatterns.Memento
 {
     public class EditorState
     {
         // variables
-        private string m_content;
+        private readonly string m_content;
 
         // ctor
         public EditorState(String content)
         {
             this.m_content = content;
+        }
+
+        public String getContent()
+        {
+            return this.m_content;
         }
     }
 }
